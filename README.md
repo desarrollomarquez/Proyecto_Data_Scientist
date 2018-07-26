@@ -17,7 +17,7 @@ le servira a muchos latinos para empezar su camino.
 
 ## Reglas
 
-* __ Siéntase libre de bifurcar este repositorio y extraer solicitudes__.
+* Siéntase libre de bifurcar este repositorio y extraer solicitudes.
 * Siempre comenta tu código.
 * Respete la topología de los nombres de archivo.
 * Hay un archivo README para cada directorio.
