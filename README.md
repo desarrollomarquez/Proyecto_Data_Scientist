@@ -2,7 +2,7 @@
 
 Ruta de las habilidades para ciencia de datos, dibujada por Swami Chandrasekaran y con estructura por parte de MrMimic  simple y excelente gracias!!
 
-[Swami Chandrasekaran](http://nirvacana.com/thoughts/becoming-a-data-scientist/)
+[Swami Chandrasekaran](http://nirvacana.com/thoughts/becoming-a-data-scientist/) - 
 [MrMimic](https://github.com/MrMimic/data-scientist-roadmap)
 ****
 
