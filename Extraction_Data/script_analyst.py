@@ -33,47 +33,9 @@ dt_order = dt.sort_values(by=['TARJETA', 'HORA'])
 print(dt_order)
 #%% # Secuencia de transacciones teniendo en tarjeta, hora y estación.
 # SQL: SELECT count(*) FROM dt_order GROUP BY TARJETA;
-#dt_order['SECUENCIA']=1
-#groupby_dt_order = dt_order.groupby(['TARJETA','HORA','ESTACION'])['TARJETA'].agg({'SECUENCIA': lambda x: (int(x.sum())) })
-print(dt_order)
+dt_order['SECUENCIA']=1
 #%%
-#tarjetas_2_6 = dt_order[dt_order['TARJETA']]
-#print(dt_order[dt_order['TARJETA'].unique()])
-#print(dt_order.groupby(['TARJETA','HORA','ESTACION','SECUENCIA'])['TARJETA','HORA','ESTACION','SECUENCIA'].size())
-df = dt_order.groupby('TARJETA').count()
-print(df)
-
-
-#%% # Agrupación por tarjeta para que solo muestre el conteo de hora.
-# SQL: SELECT HORA, count(*) FROM dt_order GROUP BY TARJETA;
-groupby_dt_order = dt_order.groupby('TARJETA')['HORA'].count() 
-print(groupby_dt_order)
-#%% # 1 Forma.Agrupación indicando qué funciones aplicar a columnas específicas.(Solo con valores numericos)
-#SQL:SELECT TARJETA, COUNT(*) FROM dt_order GROUP BY TARJETA, HORA, ESTACION ;
-
-groupby_dt_order = dt_order.groupby(['TARJETA','HORA','ESTACION'])['TARJETA'].agg(['mean', 'std'])
-print(groupby_dt_order)
-
-#%% # 2 Forma.Agrupación indicando qué funciones aplicar a columnas específicas.(Solo con valores numericos)
-#SQL:SELECT TARJETA, COUNT(*) FROM dt_order GROUP BY TARJETA, HORA, ESTACION ;
-
-groupby_dt_order = dt_order.groupby(['TARJETA','HORA','ESTACION'])['TARJETA'].agg({'Mean':np.mean,'Std':np.std, 'myMean': lambda x: (x.sum() / int(x.count())) })
-print(groupby_dt_order)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+tarjetas = dt_order['TARJETA'].unique()
+for i in range(len(tarjetas)):
+    if(tarjetas[i]==256673):
+        print(tarjetas[i])
